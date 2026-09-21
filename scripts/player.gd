@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var ACCELERATION := 10.0
+@export var MAX_SPEED := 50.0
+@export var JUMP_VELOCITY := -400.0
 
 
 func _physics_process(delta: float) -> void:
@@ -18,8 +19,6 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x += clampf(direction * ACCELERATION, -MAX_SPEED, MAX_SPEED)
 
 	move_and_slide()

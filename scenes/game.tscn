@@ -21,6 +21,7 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=172090384]
 position = Vector2(68, 58)
 script = ExtResource("1_lnu2h")
+JUMP_VELOCITY = -300.0
 
 [node name="Sprite" type="Sprite2D" parent="Player" unique_id=450675397]
 position = Vector2(-2.3841858e-07, 4.7683716e-07)
