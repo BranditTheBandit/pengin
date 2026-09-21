@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x += clampf(direction * ACCELERATION, -MAX_SPEED, MAX_SPEED)
 		$Sprite.flip_h = direction == -1
+	
 	# there's probably a better way to write this lol
 	velocity.x += clampf(FRICTION, -absf(velocity.x), absf(velocity.x)) * -1. if velocity.x > 0. else 1.
-
 	move_and_slide()
