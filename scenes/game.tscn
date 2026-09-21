@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://cskndeg86knqh"]
 
 [ext_resource type="Script" uid="uid://cqjc7rmxe80vr" path="res://scripts/player.gd" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://d0b46ma1wc11j" path="res://icon.svg" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bsnuk16h0f3ht" path="res://textures/pengin.png" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://v3hs50mccvle" path="res://textures/ice.png" id="2_yqjtg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4i8c"]
-size = Vector2(16, 32)
+size = Vector2(11, 18)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -24,9 +24,9 @@ script = ExtResource("1_lnu2h")
 JUMP_VELOCITY = -300.0
 
 [node name="Sprite" type="Sprite2D" parent="Player" unique_id=450675397]
-position = Vector2(-2.3841858e-07, 4.7683716e-07)
-scale = Vector2(0.12499999, 0.25)
-texture = ExtResource("1_uwrxv")
+texture_filter = 1
+scale = Vector2(1.0000002, 1)
+texture = ExtResource("2_lnu2h")
 
 [node name="Collision" type="CollisionShape2D" parent="Player" unique_id=981358704]
 shape = SubResource("RectangleShape2D_e4i8c")
